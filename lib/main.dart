@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:music/screens/HomeScreen.dart';
+import 'package:music/screens/playlist_screen.dart';
 import 'package:music/screens/songs_screen.dart';
 
 void main() {
@@ -19,11 +20,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const SongScreen(),
+      home: const Home(),
       getPages: [
         GetPage(name: '/', page: () => const Home()),
-        // GetPage(name: '/song', page: () => const SongScreen()),
-        // GetPage(name: '/playlist', page: () => const PlaylistScreen()),
+        GetPage(name: '/song', page: () => const SongScreen()),
+        GetPage(name: '/playlist', page: () => const PlayListScreen()),
       ],
     );
   }
