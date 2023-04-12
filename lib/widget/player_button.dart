@@ -22,7 +22,10 @@ class PlayerButtons extends StatelessWidget {
                     ? () => audioPlayer.seekToPrevious()
                     : null,
                 iconSize: 45,
-                icon: const Icon(Icons.skip_previous),
+                icon: const Icon(
+                  Icons.skip_previous,
+                  color: Colors.white,
+                ),
               );
             }),
         StreamBuilder<PlayerState>(
@@ -45,7 +48,10 @@ class PlayerButtons extends StatelessWidget {
                       audioPlayer.play();
                     },
                     iconSize: 75,
-                    icon: const Icon(Icons.play_circle),
+                    icon: const Icon(
+                      Icons.play_circle,
+                      color: Colors.white,
+                    ),
                   );
                 } else if (processingState != ProcessingState.completed) {
                   return IconButton(
@@ -53,7 +59,10 @@ class PlayerButtons extends StatelessWidget {
                       audioPlayer.pause();
                     },
                     iconSize: 75,
-                    icon: const Icon(Icons.pause_circle),
+                    icon: const Icon(
+                      Icons.pause_circle,
+                      color: Colors.white,
+                    ),
                   );
                 } else {
                   return IconButton(
@@ -62,7 +71,10 @@ class PlayerButtons extends StatelessWidget {
                       index: audioPlayer.effectiveIndices!.first,
                     ),
                     iconSize: 75,
-                    icon: const Icon(Icons.replay_circle_filled_outlined),
+                    icon: const Icon(
+                      Icons.replay_circle_filled_outlined,
+                      color: Colors.white,
+                    ),
                   );
                 }
               } else {
@@ -76,7 +88,10 @@ class PlayerButtons extends StatelessWidget {
                 onPressed:
                     audioPlayer.hasNext ? () => audioPlayer.seekToNext : null,
                 iconSize: 45,
-                icon: const Icon(Icons.skip_next),
+                icon: const Icon(
+                  Icons.skip_next,
+                  color: Colors.white,
+                ),
               );
             }),
       ],

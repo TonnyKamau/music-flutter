@@ -50,8 +50,17 @@ class _SongScreenState extends State<SongScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
         elevation: 0,
+        backgroundColor: Colors.transparent,
+        leading: IconButton(
+          onPressed: () {
+            Get.back();
+          },
+          icon: const Icon(
+            Icons.arrow_back_ios,
+            color: Colors.white,
+          ),
+        ),
       ),
       extendBodyBehindAppBar: true,
       body: Stack(
@@ -134,11 +143,14 @@ class _MusicPlayer extends StatelessWidget {
               IconButton(
                   onPressed: () {},
                   iconSize: 30,
-                  icon: const Icon(Icons.favorite_border)),
+                  icon: const Icon(Icons.favorite_border, color: Colors.white)),
               IconButton(
                   onPressed: () {},
                   iconSize: 30,
-                  icon: const Icon(Icons.share)),
+                  icon: const Icon(
+                    Icons.share,
+                    color: Colors.white,
+                  )),
             ],
           )
         ],
