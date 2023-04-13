@@ -10,7 +10,7 @@ class Song {
       required this.url,
       required this.coverUrl});
 
-    static List <Song> songs = [
+  static List<Song> songs = [
     Song(
       title: 'Song 1',
       description: 'Description 1',
@@ -28,6 +28,18 @@ class Song {
       description: 'Description 3',
       url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3',
       coverUrl: 'assets/images/cover-3.jpg',
-    ),  
+    ),
+    Song(
+      title: 'Song 4',
+      description: 'Description 4',
+      url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3',
+      coverUrl: 'assets/images/cover-4.jpg',
+    ),
+    Song(
+      title: 'Song 5',
+      description: 'Description 5',
+      url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3',
+      coverUrl: 'assets/images/cover-5.jpg',
+    ),
   ];
 }

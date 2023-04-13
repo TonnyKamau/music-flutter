@@ -31,7 +31,10 @@ class Playlist {
       songs: Song.songs,
       imageUrl: 'assets/images/playlist-4.jpg',
     ),
-    
-    
+    Playlist(
+      title: 'Jazz',
+      songs: Song.songs,
+      imageUrl: 'assets/images/playlist-5.jpg',
+    ),
   ];
 }
