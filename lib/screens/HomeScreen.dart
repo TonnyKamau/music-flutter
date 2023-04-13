@@ -23,22 +23,7 @@ class Home extends StatelessWidget {
             children: [
               const _Discover(),
               _RecentlyPlayed(songs: songs),
-              Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: Column(
-                  children: [
-                    const Header(title: 'Playlists'),
-                    ListView.builder(
-                        shrinkWrap: true,
-                        padding: const EdgeInsets.only(top: 20),
-                        physics: const NeverScrollableScrollPhysics(),
-                        itemCount: playlists.length,
-                        itemBuilder: (context, index) {
-                          return PlaylistCard(playlist: playlists[index]);
-                        }),
-                  ],
-                ),
-              )
+              _PlayList(playlists: playlists)
             ],
           ),
         ),
@@ -46,6 +31,34 @@ class Home extends StatelessWidget {
   }
 }
 
+class _PlayList extends StatelessWidget {
+  const _PlayList({
+    super.key,
+    required this.playlists,
+  });
+
+  final List<Playlist> playlists;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(20.0),
+      child: Column(
+        children: [
+          const Header(title: 'Playlists'),
+          ListView.builder(
+              shrinkWrap: true,
+              padding: const EdgeInsets.only(top: 20),
+              physics: const NeverScrollableScrollPhysics(),
+              itemCount: playlists.length,
+              itemBuilder: (context, index) {
+                return PlaylistCard(playlist: playlists[index]);
+              }),
+        ],
+      ),
+    );
+  }
+}
 
 class _RecentlyPlayed extends StatelessWidget {
   const _RecentlyPlayed({
