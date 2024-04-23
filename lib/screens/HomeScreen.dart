@@ -176,7 +176,12 @@ class _CustomBottomNavigation extends StatelessWidget {
   }
 }
 
-class _CustomAppBar extends StatelessWidget with PreferredSizeWidget {
+class _CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
+  const _CustomAppBar({
+    super.key,
+  });
+  @override
+   Size get preferredSize => const Size.fromHeight(56);
   @override
   Widget build(BuildContext context) {
     return AppBar(
@@ -198,6 +203,5 @@ class _CustomAppBar extends StatelessWidget with PreferredSizeWidget {
     );
   }
 
-  @override
-  Size get preferredSize => const Size.fromHeight(56.0);
+ 
 }
